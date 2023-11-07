@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express")
+const app = express()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+app.get("/", (_req, res) => {
+  res.status(200).send("Welcome to my Express")
+})
 
-module.exports = router;
+module.exports = app;
