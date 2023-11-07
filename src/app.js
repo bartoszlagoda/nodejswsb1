@@ -1,8 +1,10 @@
 const express = require("express")
 const app = express()
+var router = express.Router();
 
-app.get("/home", (_req, res) => {
-    res.status(200).send("Express")
-})
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
 module.exports = app
